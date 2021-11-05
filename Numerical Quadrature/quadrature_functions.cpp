@@ -54,6 +54,18 @@ double QuadratureRuleSimpson(double (*F)(double), double a, double b, int N){
 }
 
 double QuadratureRuleGauss(double (*F)(double), double a, double b, int N, int Ng){
+  
+  /*
+  Estimate the value of an integral over the interval [a, b] using the Gaussian method
+  with Ng = 3 sub-intervals
+  
+  F     function to be integrated
+  a     left side of the interval
+  b     right side of the interval
+  N     number of intervals
+  Ng    number of sub-intervals
+  */
+  
   double w[Ng], x[Ng];
   double sum, sumk;
   double x0, x1;
